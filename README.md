@@ -1,21 +1,19 @@
 # 🐆 Project Jaguar — Open-Source Multi-Agent Platform
 
-Automate strategic planning, document generation and business workflows with AI agents.
+> Automate strategic planning, document generation and business workflows with AI agents.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)]()
-[![Status](https://img.shields.io/badge/Status-WIP-orange.svg)]()
+Project Jaguar helps entrepreneurs and organizations automate strategic planning, doc generation and business workflows using multi-agent AI. The project promotes accessible, reusable and community-driven AI tools.
 
 ### Why Jaguar?
-Entrepreneurs waste 15h/week on planning docs, reports and repetitive workflows. Jaguar gives you a multi-agent system to generate them automatically.
+Founders waste 15+ hours/week on docs and planning. Jaguar gives you agents to do it automatically.
 
-### ✨ Features
+### Features
 - Strategic planning agent
 - Document generation (business plans, OKRs, SOPs)
 - Workflow automation with memory
-- Plug-and-play with OpenAI / Claude / local models
+- Works with Claude, OpenAI, local models
 
-### 🚀 Quick Start
+### Quick Start
 ```bash
 git clone https://github.com/Forwarduy/Project-Jaguar.git
 cd Project-Jaguar
