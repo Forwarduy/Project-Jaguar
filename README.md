@@ -1,6 +1,8 @@
 ![Jaguar Logo](jaguar_logo_transparent.png)
 
-# 🐆 Project-Jaguar
+![Jaguar Logo](jaguar_logo_transparent.png)
+
+## 🐆 Project-Jaguar
 
 ![MIT](https://img.shields.io/badge/License-MIT-yellow)
 ![Python](https://img.shields.io/badge/python-3.10+-blue)
