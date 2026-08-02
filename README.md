@@ -1,5 +1,4 @@
-![Jaguar Logo](761413344_4318331271742146_1209407639266819644_n.jpeg)
-
+![Jaguar Logo](logo.jpg)
 # 🐆 Project Jaguar
 
 **Open-source multi-agent AI platform for strategic planning & business automation. Built in public from Montevideo, UY.**
