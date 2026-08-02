@@ -1,4 +1,4 @@
-![Jaguar Logo](jaguar_logo_transparent.png)
+![Jaguar Logo](761413344_4318331271742146_1209407639266819644_n.jpeg)
 
 ## 🐆 Project-Jaguar
 
@@ -9,11 +9,19 @@
 > Affordable alternative to enterprise AI ops for solopreneurs. Stop paying $200/mo.
 
 ## What is Jaguar?
-- **Research Agent** - Market research
-- **Outreach Agent** - Cold email, LinkedIn
-- **Planning Agent** - OKRs, roadmaps
-- **Workflow Agent** - n8n automation
+
+- **Research Agent** - Market research, competitor analysis
+- **Outreach Agent** - Cold email, LinkedIn automation  
+- **Planning Agent** - OKRs, roadmaps, business strategy
+- **Workflow Agent** - n8n automation, API integrations
 
 **Stack:** Python + LangChain + n8n + Claude Code + MCP
 
 ## Quickstart
+
+```bash
+git clone https://github.com/Forwarduy/Project-Jaguar.git
+cd Project-Jaguar
+pip install -r requirements.txt
+cp .env.example .env
+python main.py
