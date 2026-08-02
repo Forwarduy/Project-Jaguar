@@ -1,3 +1,5 @@
+![Jaguar Logo](jaguar_logo_transparent.png)
+
 # 🐆 Project-Jaguar
 
 ![MIT](https://img.shields.io/badge/License-MIT-yellow)
