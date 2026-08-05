@@ -1,6 +1,0 @@
-pytest
-pytest-cov
-pydantic
-pydantic-settings
-anthropic
-typer
