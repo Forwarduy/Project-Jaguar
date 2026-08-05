@@ -1,6 +1,6 @@
 # Contributing to Project Jaguar 🐆
 
-Thanks for wanting to contribute! This is built in public from Montevideo.
+We welcome contributions from the community! Please read our contributing guidelines before submitting pull requests. This is built in public from Montevideo.
 
 ## Quick Start for Devs
 
