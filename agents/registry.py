@@ -1,0 +1,59 @@
+from typing import Dict, List, Type, Optional, Union, Callable
+from agents.base import BaseAgent
+
+
+class AgentRegistry:
+    """Central registry for dynamic agent discovery and instantiation."""
+
+    def __init__(self) -> None:
+        self._registry: Dict[str, Type[BaseAgent]] = {}
+
+    def register(
+        self,
+        name_or_cls: Union[str, Type[BaseAgent], None] = None,
+        agent_cls: Optional[Type[BaseAgent]] = None,
+    ) -> Union[Type[BaseAgent], Callable[[Type[BaseAgent]], Type[BaseAgent]]]:
+        """Register an agent class either directly or as a decorator."""
+        # Case 1: Direct method call -> reg.register("research", ResearchAgent)
+        if isinstance(name_or_cls, str) and agent_cls is not None:
+            self._registry[name_or_cls.lower()] = agent_cls
+            return agent_cls
+
+        # Case 2: Decorator without parenthesized args -> @reg.register
+        if callable(name_or_cls) and agent_cls is None:
+            cls = name_or_cls
+            key = getattr(cls, "name", cls.__name__).lower()
+            self._registry[key] = cls
+            return cls
+
+        # Case 3: Decorator with name arg -> @reg.register("research")
+        def decorator(cls: Type[BaseAgent]) -> Type[BaseAgent]:
+            key = (name_or_cls or getattr(cls, "name", cls.__name__)).lower()
+            self._registry[key] = cls
+            return cls
+
+        return decorator
+
+    def get(self, name: str) -> BaseAgent:
+        """Instantiate and return an agent by name."""
+        key = name.lower()
+        if key not in self._registry:
+            raise KeyError(f"Agent '{name}' is not registered in the system.")
+        agent_cls = self._registry[key]
+        return agent_cls()
+
+    def list_agents(self) -> List[str]:
+        """Return a list of all registered agent names."""
+        return list(self._registry.keys())
+
+
+# Singleton instance used across the system
+AGENT_REGISTRY = AgentRegistry()
+
+
+def get_agent(name: str) -> BaseAgent:
+    return AGENT_REGISTRY.get(name)
+
+
+def list_agents() -> List[str]:
+    return AGENT_REGISTRY.list_agents()
