@@ -1,0 +1,16 @@
+"""Tests for shell system integration."""
+
+from unittest.mock import patch
+from agents.shell_system import ShellSystem
+from agents.result import AgentResult
+
+class MockShellAgent:
+    def run(self, prompt: str, **kwargs) -> AgentResult:
+        return AgentResult(success=True, content=f"Shell executed: {prompt}", agent_name="shell")
+
+def test_shell_system_run():
+    with patch("agents.shell_system.AGENT_REGISTRY") as mock_reg:
+        mock_reg.get.return_value = lambda: MockShellAgent()
+        shell = ShellSystem()
+        result = shell.execute("echo test")
+        assert result.success is True
